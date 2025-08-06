@@ -10,6 +10,7 @@ export interface IStorage {
   // Content operations
   createContent(content: InsertContent): Promise<Content>;
   getContentByRoomId(roomId: string): Promise<Content[]>;
+  getContentById(contentId: string): Promise<Content | undefined>;
   deleteContent(contentId: string, roomId: string): Promise<boolean>;
 }
 
@@ -65,6 +66,10 @@ export class MemStorage implements IStorage {
     return Array.from(this.content.values())
       .filter(content => content.roomId === roomId)
       .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime());
+  }
+
+  async getContentById(contentId: string): Promise<Content | undefined> {
+    return this.content.get(contentId);
   }
 
   async deleteContent(contentId: string, roomId: string): Promise<boolean> {
