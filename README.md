@@ -143,4 +143,4 @@ If you have any questions or run into issues, please open an issue on GitHub.
 ⭐ Star this repository if you find it helpful!
 
 ## 🚀 Live Demo
-Deployed on Vercel: Coming soon...
+Deployed on Vercel: **[https://data-drop-kr0nznh2e-25snipers-projects.vercel.app](https://data-drop-kr0nznh2e-25snipers-projects.vercel.app)**
